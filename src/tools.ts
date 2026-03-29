@@ -1,4 +1,5 @@
 import type { MCPToolDefinition } from "./types.js";
+import { VAULT_STATE_TOOLS } from "./vault-state-tools.js";
 
 /**
  * All MACHINA vault MCP tool definitions.
@@ -282,5 +283,5 @@ const TOOL_DEFINITIONS: MCPToolDefinition[] = [
 
 /** Returns all MACHINA vault MCP tool definitions. */
 export function getToolDefinitions(): MCPToolDefinition[] {
-  return TOOL_DEFINITIONS;
+  return [...TOOL_DEFINITIONS, ...VAULT_STATE_TOOLS];
 }
